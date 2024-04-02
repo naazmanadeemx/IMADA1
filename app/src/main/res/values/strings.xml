@@ -5,4 +5,7 @@
     <string name="app_title">THE HISTORY APP</string>
     <string name="age_input_hint">ENTER AGE</string>
     <string name="image_description">Description of your image here</string>
+    <string name="empty_age_input">PLEASE ENTER AN AGE.</string>
+    <string name="invalid_age_input">Invalid input. Age must be a whole number.</string>
+    <string name="age_out_of_range">The age is out of range. Please enter an age between 20 and 100.</string>
 </resources>

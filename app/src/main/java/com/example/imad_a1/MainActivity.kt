@@ -13,7 +13,7 @@ import android.util.Log
 
 class MainActivity : AppCompatActivity() {
     companion object {
-        private const val TAG = "MainActivity" // tag for logging
+        private const val TAG = "MainActivity" // tag for logging (Open AI 2024)
     }
 
     // declaring UI elements
@@ -37,18 +37,18 @@ class MainActivity : AppCompatActivity() {
         searchButton.setOnClickListener {
             // get age input from EditText and trim leading/trailing whitespace
             val ageText = ageInput.text.toString().trim()
-            Log.d(TAG, "User entered age: $ageText") // logging user input
+            Log.d(TAG, "User entered age: $ageText") // logging user input (Open AI 2024)
 
             // check if age input is empty
             if (ageText.isEmpty()) {
-                resultTextView.text = "PLEASE ENTER AN AGE."
-                Log.w(TAG, "Empty age input") // logging empty age input
+                resultTextView.text = getString(R.string.empty_age_input)
+                Log.w(TAG, "Empty age input") // logging empty age input (Open AI 2024)
                 return@setOnClickListener
             }
 
             // check if age input contains non-digit characters
             if (!ageText.all { it.isDigit() }) {
-                resultTextView.text = "Invalid input. Age must be a whole number."
+                resultTextView.text = getString(R.string.invalid_age_input)
                 Log.w(TAG, "Invalid age input: $ageText") // logging invalid age input
                 return@setOnClickListener
             }
@@ -59,7 +59,7 @@ class MainActivity : AppCompatActivity() {
             // check if age is within valid range
 
             if (age !in 20..100) {
-                resultTextView.text = "The age is out of range. Please enter an age between 20 and 100."
+                resultTextView.text = getString(R.string.age_out_of_range)
                 Log.w(TAG, "Age out of range: $age") // logging age out of range
 
                 return@setOnClickListener
@@ -98,7 +98,7 @@ class MainActivity : AppCompatActivity() {
             else "Oops! No historical figures found with the entered age. Keep exploring!"
             // display result message
             resultTextView.text = message
-            Log.i(TAG, "Result message: $message") // logging result message
+            Log.i(TAG, "Result message: $message") // logging result message (Open AI 2024)
         }
 
         // clear button click listener
