@@ -1,6 +1,5 @@
 // Author: Naazma Iqbal
 // Date: 28/03/2024
-// Description: This Android app, named "The History App," is an educational game designed to engage students by exploring historical figures' ages. Users input their age, and the app matches it with famous historical figures who passed away at the same age.
 
 package com.example.imad_a1
 
@@ -13,7 +12,7 @@ import android.util.Log
 
 class MainActivity : AppCompatActivity() {
     companion object {
-        private const val TAG = "MainActivity" // tag for logging (Open AI 2024)
+        private const val TAG = "MainActivity" // tag for logging
     }
 
     // declaring UI elements
@@ -37,12 +36,12 @@ class MainActivity : AppCompatActivity() {
         searchButton.setOnClickListener {
             // get age input from EditText and trim leading/trailing whitespace
             val ageText = ageInput.text.toString().trim()
-            Log.d(TAG, "User entered age: $ageText") // logging user input (Open AI 2024)
+            Log.d(TAG, "User entered age: $ageText") // logging user input
 
             // check if age input is empty
             if (ageText.isEmpty()) {
                 resultTextView.text = getString(R.string.empty_age_input)
-                Log.w(TAG, "Empty age input") // logging empty age input (Open AI 2024)
+                Log.w(TAG, "Empty age input") // logging empty age input
                 return@setOnClickListener
             }
 
@@ -98,7 +97,7 @@ class MainActivity : AppCompatActivity() {
             else "Oops! No historical figures found with the entered age. Keep exploring!"
             // display result message
             resultTextView.text = message
-            Log.i(TAG, "Result message: $message") // logging result message (Open AI 2024)
+            Log.i(TAG, "Result message: $message") // logging result message
         }
 
         // clear button click listener
@@ -110,4 +109,3 @@ class MainActivity : AppCompatActivity() {
     }
 }
 
-// references included in the README file.
